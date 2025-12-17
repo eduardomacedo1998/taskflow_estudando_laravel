@@ -25,6 +25,9 @@ Route::get('/sobre', function () {
     return view('askFlow v1.0 - Desenvolvido por ' . $nome);
 });
 
+// rota deletar tarefa
+Route::delete('/task/{id}', [TaskController::class, 'destroy'])->name('task.destroy');
+
 
 // Rota /status
 
