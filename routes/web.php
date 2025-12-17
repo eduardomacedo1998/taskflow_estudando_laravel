@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Rota / para index em controller TaskController
+Route::get('/', [TaskController::class, 'index'])->name('task.index');
+
 
 
 // Rota /sobre
@@ -30,3 +31,5 @@ Route::get('/sobre', function () {
 Route::get('/status', function () {
     return response()->json(['status' => 'operacional','servidor' => 'laravel']);
 });
+
+
