@@ -50,7 +50,16 @@
                 @method('delete')
                 <button type="submit">Delete</button>
             </form>
+            
         @endforeach 
+         @if(session('success'))
+        <div style="color: green;">
+            {{ session('success') }}
+        </div>
+    @endif
     </ul>
+
+    
+   
 </body>
 </html>

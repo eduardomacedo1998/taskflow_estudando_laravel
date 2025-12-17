@@ -20,7 +20,8 @@ class TaskController extends Controller
     {
         $task = Task::findOrFail($id); // Encontra a tarefa pelo ID
         $task->delete(); // Deleta a tarefa
-        return redirect()->route('task.index'); // Redireciona para a lista de tarefas
+        // utiliza o redirect para a rota task.index com um mensagem de sucesso
+        return redirect()->route('task.index',)->with('success', 'Tarefa deletada com sucesso!'); // Redireciona para a lista de tarefas
     }   
 
 }
