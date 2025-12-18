@@ -15,9 +15,10 @@ use App\Http\Controllers\TaskController;
 */
 
 // Rota / para index em controller TaskController
-Route::get('/', [TaskController::class, 'index'])->name('task.index');
+Route::get('/', [TaskController::class, 'index'])->name('tasks.index');
 
-
+// Rota /criar-tarefa para criar tarefa
+Route::post('/criar-tarefa', [TaskController::class, 'store'])->name('task.store');
 
 // Rota /sobre
 Route::get('/sobre', function () {
@@ -27,6 +28,9 @@ Route::get('/sobre', function () {
 
 // rota deletar tarefa
 Route::delete('/task/{id}', [TaskController::class, 'destroy'])->name('task.destroy');
+
+
+// 
 
 
 // Rota /status
