@@ -46,6 +46,8 @@ class TaskController extends Controller
             'description' => 'nullable|string',
         ]);
 
+        
+
         $this->TaskRepositorys->createTask($data); // Cria uma nova tarefa usando o repositório
 
         return redirect()->route('task.index')->with('success', 'Tarefa criada com sucesso!'); // Redireciona para a lista de tarefas com mensagem de sucesso

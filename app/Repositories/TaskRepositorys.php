@@ -28,7 +28,7 @@ Class TaskRepositorys
         }
 
 
-        return $this->tasksModel->all(); // Retrieve all tasks from the database
+        return $this->tasksModel->all(); // Retrieve all tasks
     }
 
     public function findTaskById($id) // Find a task by its ID
